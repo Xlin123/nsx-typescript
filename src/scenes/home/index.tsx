@@ -44,7 +44,7 @@ const Home = ({setSelectedPage}: Props) => {
                 </div>
             </div>
 
-            <p className='mt-4 text-sm'>
+            <p className='mt-4 text-sm font-montserrat text-whiteAccent-500'>
               Honda Motor’s NSX engineering team organized an event for NSX owners in June 1991. The event was intended to give the owners a chance to understand the true capabilities of their car, and to help them enjoy it safely. Yet, those who had created the NSX wanted to continue refining it. 
             </p>
           </motion.div>
