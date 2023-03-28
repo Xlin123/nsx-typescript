@@ -29,6 +29,7 @@ useEffect(() => {
       setSelectedPage={setSelectedPage}/>
 
       <Home setSelectedPage={setSelectedPage}/>
+      
     </div>
   )
 }

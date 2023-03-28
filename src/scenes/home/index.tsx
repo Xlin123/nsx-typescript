@@ -7,6 +7,7 @@ import hrcSponsor from '@/assets/hrcSponsor.png';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import ActionButton from '@/shared/ActionButton';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { motion } from 'framer-motion';
 
 
 type Props = {
@@ -22,11 +23,21 @@ const Home = ({setSelectedPage}: Props) => {
     className='gap-8 bg-gxray-20 py-10 md:h-full md:pb-0'>
 
       {/*IMAGE AND MAIN HEADER*/}
-      <div className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'>
+      <motion.div className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'
+      onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
         {/*MAIN*/}
         <div className='z-10 mt-32 md:basis-3/5'>
           {/*headings*/}
-          <div className='md:-mt-20'>
+          <motion.div 
+          className='md:-mt-20'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.5}}
+          transition={{duration:0.5}}
+          variants={{
+            hidden: {opacity:0, x:-50},
+            visible: {opacity:1, x:0}
+          }}>
             <div className='relative'>
                 <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1]'>
                   <img alt='home-page-text' src={homePageText}></img>
@@ -36,7 +47,7 @@ const Home = ({setSelectedPage}: Props) => {
             <p className='mt-4 text-sm'>
               Honda Motor’s NSX engineering team organized an event for NSX owners in June 1991. The event was intended to give the owners a chance to understand the true capabilities of their car, and to help them enjoy it safely. Yet, those who had created the NSX wanted to continue refining it. 
             </p>
-          </div>
+          </motion.div>
         </div>
         
 
@@ -45,12 +56,20 @@ const Home = ({setSelectedPage}: Props) => {
           '>
           <img alt="home-pageGraphic" src={homePagePicture}/>
         </div>
-      </div>
+    </motion.div>
 
 
       {/*ACTIONS*/}
-      <div className='mt-4 flex items-center mb-8 justify-center md:-mt-8'>
-          <div className='md:w-1/3'>
+      <motion.div className='mt-4 flex items-center mb-8 justify-center md:-mt-8'
+      initial="hidden"
+      whileInView="visible"
+      viewport={{once: true, amount: 0.5}}
+      transition={{delay:0.2, duration:0.5}}
+      variants={{
+        hidden: {opacity:0, x:-50},
+        visible: {opacity:1, x:0}
+      }}>
+          <div className='mr-4'>
               <ActionButton setSelectedPage={setSelectedPage}>
                  Join Now!
               </ActionButton>
@@ -62,7 +81,7 @@ const Home = ({setSelectedPage}: Props) => {
               >
                 Learn More
               </AnchorLink>
-        </div>
+      </motion.div>
 
       {/*SPONSORS*/}
       {isAboveMediumScreens && (
