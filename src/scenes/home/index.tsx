@@ -52,9 +52,8 @@ const Home = ({setSelectedPage}: Props) => {
         
 
         {/*IMAGE*/}
-        <div className='flex basis-3/5 justify-center md:z-10 md:ml-5
-          '>
-          <img alt="home-pageGraphic" src={homePagePicture}/>
+        <div className='flex basis-3/5 justify-center md:z-10 md:ml-5'>
+          <img className="rounded-md" alt="home-pageGraphic" src={homePagePicture}/>
         </div>
     </motion.div>
 
@@ -88,9 +87,9 @@ const Home = ({setSelectedPage}: Props) => {
         <div className='h-[150px] w-full bg-primary-300 py-10'>
           <div className='mx-auto w-5/6'>
             <div className='flex w-3/5 items-center justify-between gap-4'>
-              <img className = 'w-[100px] h-[100px]' alt='foxSponsor' src={foxSponsor}/>
-              <img className = 'w-[100px] h-[100px]' alt='yoshimuraSponsor' src={yoshimuraSponsor}/>
-              <img className = 'w-[100px] h-[100px]' alt='hrcSponsor' src={hrcSponsor}/>
+              <img className = 'w-[100px] h-[100px] rounded' alt='foxSponsor' src={foxSponsor}/>
+              <img className = 'w-[100px] h-[100px] rounded' alt='yoshimuraSponsor' src={yoshimuraSponsor}/>
+              <img className = 'w-[100px] h-[100px] rounded' alt='hrcSponsor' src={hrcSponsor}/>
             </div>
           </div>
         </div>
