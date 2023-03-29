@@ -23,8 +23,8 @@ const Descriptor = ({picture, title, body, link}: Props) => {
                 <img alt='' src={picture} className="flex basis-2/5 p-4"></img>
             </div>
         </div>
-        <h4 className='font-bold '>{title}</h4>
-        <p className='my-3 text-whiteAccent-500'>{body}</p>
+        <h4 className='font-bold text-lg'>{title}</h4>
+        <p className='my-3 text-whiteAccent-500 text-md'>{body}</p>
         {link}
     </motion.div>
   )
