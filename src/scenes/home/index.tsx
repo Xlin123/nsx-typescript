@@ -92,8 +92,8 @@ const Home = ({setSelectedPage}: Props) => {
               <img className = 'w-[100px] h-[100px] rounded' alt='foxSponsor' src={foxSponsor}/>
               <img className = 'w-[100px] h-[100px] rounded' alt='yoshimuraSponsor' src={yoshimuraSponsor}/>
               <img className = 'w-[100px] h-[100px] rounded' alt='hrcSponsor' src={hrcSponsor}/>
-              <img className = 'w-[100px] h-[100px] rounded' alt='redbullSponsor' src={redbullSponsor}/>
-              <img className = 'w-[100px] h-[100px] rounded' alt='michelinSponsor' src={michelinSponsor}/>
+              <img className = 'w-[140px] h-[100px] rounded' alt='redbullSponsor' src={redbullSponsor}/>
+              <img className = 'w-[140px] h-[100px] rounded' alt='michelinSponsor' src={michelinSponsor}/>
             </div>
           </div>
         </div>
