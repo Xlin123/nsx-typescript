@@ -54,7 +54,7 @@ const Home = ({setSelectedPage}: Props) => {
         
 
         {/*IMAGE*/}
-        <div className='flex basis-3/5 justify-center md:z-10 md:ml-5'>
+        <div className='flex basis-3/5 justify-center p-5 md:z-10 md:m-5'>
           <img className="rounded-md" alt="home-pageGraphic" src={homePagePicture}/>
         </div>
     </motion.div>

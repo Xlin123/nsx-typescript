@@ -16,7 +16,7 @@ const descriptions: Array<DescriptionType> = [
     {
         picture: pininfarinaPicture,
         title: "HP-X Honda Pininfarina",
-        body: "The Honda Pininfarina eXperimental was a concept car characterised by wedge shaped lines, of an extremely aerodynamic sport berlinetta.",
+        body: "The Honda Pininfarina eXperimental was a concept car of an extremely aerodynamic sport berlinetta. Developed with the help of Pininfarina.",
         link: <u><a href='https://web.archive.org/web/20070927010111/http://www.pininfarina.com/index/storiaModelli/modelli.html?scheda.php%3Fid=36&cmp=anno&ord=desc&sl=0&ids=1a6cbefaafe007a7d9b765f7b345b49f'>Learn More</a></u>
     },
     {
@@ -28,7 +28,7 @@ const descriptions: Array<DescriptionType> = [
     {
         picture: interiorPicture,
         title: "Honda vs Ferrari",
-        body: "The NSX is one of the most famous models that Japanese Engineers made in order to compete with Ferrari's Supercars.",
+        body: "The NSX is one of the most famous models that Japanese Engineers made in order to compete with the world's supreme brands of supercars.",
         link: <u><a href='https://dyler.com/blog/403/honda-nsx-how-the-japanese-made-a-competitor-for-ferrari-part-i'>Learn More</a></u>
     }
 ];
@@ -49,7 +49,7 @@ const Bio = ({setSelectedPage}: Props) => {
     <section id='bio' className='mx-auto min-h-full w-5/6 py-20'>
         <motion.div className=''
         onViewportEnter={() => setSelectedPage(SelectedPage.Bio)}>
-            <motion.div className='md:my-5 md:w-3/5'
+            <motion.div className='md:my-5 md:w-full md:px-20'
             initial="hidden"
             whileInView="visible"
             viewport={{once: true, amount: 0.5}}
@@ -59,7 +59,7 @@ const Bio = ({setSelectedPage}: Props) => {
               visible: {opacity:1, x:0}
             }}>
                 <Heading>The Story</Heading>
-                <p className='my-5 text-sm text-whiteAccent-500'>
+                <p className='my-5 text-sm text-whiteAccent-500 text-center'>
                 The Honda NSX, marketed in North America as the Acura NSX, is a two-seat, mid-engined coupe sports car manufactured by Honda.
 The origins of the NSX trace back to 1984, with the HP-X Honda Pininfarina eXperimental concept, which was a mid-engine 3.0 L V6 engine rear wheel drive sports car. Honda committed to the project, with the intention of meeting or exceeding the performance of the then V8 engine Ferrari range, while offering reliability and a lower price point. The concept thus evolved and had its name changed to NS-X, which stood for "New", "Sportscar" "eXperimental", although the production model was launched as the NSX.
                 </p>
@@ -70,7 +70,7 @@ The origins of the NSX trace back to 1984, with the HP-X Honda Pininfarina eXper
             className='mt-5 items-center justify-between gap-8 md:flex'
             initial="hidden"
             whileInView="visible"
-            viewport={{once:true, amount:0.5}}
+            viewport={{once:true, amount:0.2}}
             variants={container}
             >
                 {descriptions.map((description : DescriptionType) => (
