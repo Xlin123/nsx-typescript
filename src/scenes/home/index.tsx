@@ -4,6 +4,8 @@ import homePageText from '@/assets/HomePageText.png';
 import foxSponsor from '@/assets/foxSponsor.png';
 import yoshimuraSponsor from '@/assets/yoshimuraSponsor.png';
 import hrcSponsor from '@/assets/hrcSponsor.png';
+import redbullSponsor from '@/assets/redbullSponsor.png';
+import michelinSponsor from '@/assets/michelinSponsor.png';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import ActionButton from '@/shared/ActionButton';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -84,12 +86,14 @@ const Home = ({setSelectedPage}: Props) => {
 
       {/*SPONSORS*/}
       {isAboveMediumScreens && (
-        <div className='h-[150px] w-full bg-primary-300 py-10'>
+        <div className='h-[150px] w-full bg-primary-300 py-5'>
           <div className='mx-auto w-5/6'>
-            <div className='flex w-3/5 items-center justify-between gap-4'>
+            <div className='flex w-full items-center justify-between gap-4'>
               <img className = 'w-[100px] h-[100px] rounded' alt='foxSponsor' src={foxSponsor}/>
               <img className = 'w-[100px] h-[100px] rounded' alt='yoshimuraSponsor' src={yoshimuraSponsor}/>
               <img className = 'w-[100px] h-[100px] rounded' alt='hrcSponsor' src={hrcSponsor}/>
+              <img className = 'w-[100px] h-[100px] rounded' alt='redbullSponsor' src={redbullSponsor}/>
+              <img className = 'w-[100px] h-[100px] rounded' alt='michelinSponsor' src={michelinSponsor}/>
             </div>
           </div>
         </div>
