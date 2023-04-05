@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import Home from '@/scenes/home';
 import Navbar from '@/scenes/navbar';
 import Bio from '@/scenes/bio';
+//import Specs from '@/scenes/specs';
 import { SelectedPage } from './shared/types';
+import MobileSpacer from './shared/MobileSpacer';
 
 
 
@@ -28,9 +30,10 @@ useEffect(() => {
       isTopOfPage={isTopOfPage}
       selectedPage={selectedPage}
       setSelectedPage={setSelectedPage}/>
-
       <Home setSelectedPage={setSelectedPage}/>
       <Bio setSelectedPage={setSelectedPage}/>
+      <MobileSpacer></MobileSpacer>
+      {/*<Specs setSelectedPage={setSelectedPage}/>*/}
   </div>
   )
 }
