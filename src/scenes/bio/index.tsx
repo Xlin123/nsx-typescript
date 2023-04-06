@@ -46,7 +46,7 @@ type Props = {
 
 const Bio = ({setSelectedPage}: Props) => {
   return (
-    <section id='bio' className='mx-auto min-h-full w-5/6 py-20'>
+    <section id='story' className='mx-auto min-h-full w-5/6 py-20'>
         <motion.div className=''
         onViewportEnter={() => setSelectedPage(SelectedPage.Bio)}>
             <motion.div className='md:my-5 md:w-full md:px-20'

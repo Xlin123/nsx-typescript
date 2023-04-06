@@ -14,3 +14,9 @@ export enum SelectedPage{
     body: string,
     link: React.ReactNode;
   }
+
+  export interface SpecType{
+    name: string;
+    description: string;
+    image: string;
+  }

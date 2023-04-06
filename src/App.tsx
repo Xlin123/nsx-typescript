@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Home from '@/scenes/home';
 import Navbar from '@/scenes/navbar';
 import Bio from '@/scenes/bio';
-//import Specs from '@/scenes/specs';
+import Specs from '@/scenes/specs';
 import { SelectedPage } from './shared/types';
 import MobileSpacer from './shared/MobileSpacer';
 
@@ -33,7 +33,7 @@ useEffect(() => {
       <Home setSelectedPage={setSelectedPage}/>
       <Bio setSelectedPage={setSelectedPage}/>
       <MobileSpacer></MobileSpacer>
-      {/*<Specs setSelectedPage={setSelectedPage}/>*/}
+      <Specs setSelectedPage={setSelectedPage}/>
   </div>
   )
 }
