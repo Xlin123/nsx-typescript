@@ -18,11 +18,12 @@ type Props = {
 
 const Home = ({setSelectedPage}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
+  const titleTextStyle = `before:absolute before:-top-20 before:-left-20 before:z-[-1] p-6`;
 
   return (
     <section
     id='home' 
-    className='gap-8 bg-gxray-20 py-10 md:h-full md:pb-0'>
+    className='gap-8 py-10 md:h-full md:pb-0'>
 
       {/*IMAGE AND MAIN HEADER*/}
       <motion.div className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'
@@ -41,12 +42,12 @@ const Home = ({setSelectedPage}: Props) => {
             visible: {opacity:1, x:0}
           }}>
             <div className='relative'>
-                <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1]'>
+                <div className={`${!isAboveMediumScreens ? ('ml-10 ' + titleTextStyle) : titleTextStyle}`}>
                   <img alt='home-page-text' src={homePageText}></img>
                 </div>
             </div>
 
-            <p className='mt-4 text-sm font-montserrat text-whiteAccent-500'>
+            <p className='mt-4 text-sm font-montserrat text-whiteAccent-500 px-6 mb-10'>
               Honda Motor’s NSX engineering team organized an event for NSX owners in June 1991. The event was intended to give the owners a chance to understand the true capabilities of their car, and to help them enjoy it safely. Yet, those who had created the NSX wanted to continue refining it. 
             </p>
           </motion.div>
@@ -54,7 +55,7 @@ const Home = ({setSelectedPage}: Props) => {
         
 
         {/*IMAGE*/}
-        <div className='flex basis-3/5 justify-center p-5 md:z-10 md:m-5'>
+        <div className='flex basis-3/5 justify-center pl-3 md:z-10 md:m-5'>
           <img className="rounded-md" alt="home-pageGraphic" src={homePagePicture}/>
         </div>
     </motion.div>
