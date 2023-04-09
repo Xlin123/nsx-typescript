@@ -5,6 +5,8 @@ import Bio from '@/scenes/bio';
 import Specs from '@/scenes/specs';
 import { SelectedPage } from './shared/types';
 import MobileSpacer from './shared/MobileSpacer';
+import Modern from './scenes/modernized';
+import ContactUs from './scenes/contact';
 
 
 
@@ -34,6 +36,9 @@ useEffect(() => {
       <Bio setSelectedPage={setSelectedPage}/>
       <MobileSpacer></MobileSpacer>
       <Specs setSelectedPage={setSelectedPage}/>
+      <Modern setSelectedPage={setSelectedPage}/>
+      <ContactUs setSelectedPage={setSelectedPage}/>
+
   </div>
   )
 }
