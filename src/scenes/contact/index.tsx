@@ -30,7 +30,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
 
 
   return (
-    <section id='ContactUs' className='mx-auto w-5/6 pt-24 pb-32'>
+    <section id='contact' className='mx-auto w-5/6 pt-24 pb-32'>
         <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
             <motion.div
@@ -46,7 +46,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
             <Heading>
                 <span className='text-whiteAccent-400'>JOIN NOW</span> TO KEEP UPDATED
             </Heading>
-            <p className='my-5 w-5/6'>
+            <p className='my-5 text-whiteAccent-500 '>
                 Stay in contact with us and if you have any inquiries/bugs please feel free to let me know.
             </p>
             </motion.div>
@@ -89,7 +89,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                         </p>
                     )}
 
-                    <input className={inputStyles} type='text' placeholder='MESSAGE' {...register("message", {
+                    <input className={inputStyles } type='text' placeholder='MESSAGE' {...register("message", {
                         required:true, 
                         maxLength:100
                     })}/>
@@ -99,11 +99,12 @@ const ContactUs = ({setSelectedPage}: Props) => {
                             {errors.message.type === "maxLength" && "Max Length is 100 Characters."}
                         </p>
                     )}
-
-                    <button type='submit' 
-                    className='my-5 rounded-lg bg-secondary-300 text-primary-600 px-20 py-3 transition duration-500 hover:text-white'>
-                    SUBMIT
-                    </button>
+                    <div className='justify-center'>
+                        <button type='submit' 
+                        className='my-5 rounded-lg bg-secondary-300 text-primary-600 px-20 py-3 transition duration-500 hover:text-white'>
+                        SUBMIT
+                        </button>
+                    </div>
                 </form>
             </motion.div>
             <div className='mx-auto basis-3/5'>

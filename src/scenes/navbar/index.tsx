@@ -17,7 +17,7 @@ const Navbar = ({selectedPage, setSelectedPage, isTopOfPage}: Props) => {
     const navbarBackground = isTopOfPage ? "" : "bg-primary-800 drop-shadow"; 
     return (
         <nav>
-            <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6 `}>
+            <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-40 w-full py-6 `}>
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-1/6 gap-16`}>
                         <img src={Logo} alt='logo' height="90px" width="75px"/>
@@ -34,7 +34,7 @@ const Navbar = ({selectedPage, setSelectedPage, isTopOfPage}: Props) => {
 
                         </div>
                         <div className={`${flexBetween} gap-8`}>
-                            <ActionButton setSelectedPage={setSelectedPage}>Become a Member!</ActionButton>
+                            <ActionButton setSelectedPage={setSelectedPage}>Contact Us!</ActionButton>
                         </div>
                     </div>
                     </>
@@ -57,11 +57,11 @@ const Navbar = ({selectedPage, setSelectedPage, isTopOfPage}: Props) => {
                         </button>
                     </div>
                     <div className="ml-[33%] flex flex-col gap-10 text-2xl text-primary-700">
-                            <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-                            <Link page="Bio" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+                            <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                            <Link page="Story" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                             <Link page="Specs" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                             <Link page ="Modernized" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-
+                            <Link page ="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                         </div>
                 </div>
             )}

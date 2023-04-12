@@ -5,7 +5,7 @@ export enum SelectedPage{
     Bio = "bio",
     Specs = "specs",
     Modern = "modern",
-    ContactUs = "contactus"
+    ContactUs = "contact"
   }
 
   export interface DescriptionType{

@@ -9,11 +9,13 @@ import image5 from '@/assets/suspension.jpg'
 import image6 from '@/assets/brakes.jpg'
 import Heading from '@/shared/Heading';
 import Spec from './Spec';
+import Scrollbar from 'react-custom-scrollbars-2'
 
 
 type Props = {
   setSelectedPage: (value:SelectedPage) => void;
 }
+
 
 const specs : Array<SpecType> = [
   {
@@ -48,6 +50,7 @@ const specs : Array<SpecType> = [
   },
 ]
 
+
 const Specs = ({setSelectedPage}: Props) => {
   return (
     <section id='specs' className='mx-auto min-h-full w-5/6 py-20 bg-primary-500'>
@@ -66,24 +69,24 @@ const Specs = ({setSelectedPage}: Props) => {
               <Heading>Specs</Heading>
             </div>
             <div className='md:mx-4 px-8 pb-4 text-whiteAccent-500 justify-center'>
-              <p className='py-5'> The intention in creating the Acura NSX was to produce a hand-built, exotic, mid-engine sports car that would establish entirely new levels of performance, refinement, driveability and reliability. The NSX is designed to represent an entirely new definition of the exotic sports car.
+              <p className='py-5 text-center'> The intention in creating the Acura NSX was to produce a hand-built, exotic, mid-engine sports car that would establish entirely new levels of performance, refinement, driveability and reliability. The NSX is designed to represent an entirely new definition of the exotic sports car.
               The mid-engine, 2-seater NSX is powered by an all-aluminum, 3.0-liter V-6 which produces 270 hp and 210 lbs.-ft. of torque. The normally aspirated engine is equipped with dual overhead cams, four valves per cylinder, a Variable Valve Timing and Lift Electronic Control (VTEC) system, and a Variable Volume Induction System (VVIS) intake configuration.
               </p>
             </div>
           </motion.div>
-
           <div className='mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden'>
-            <ul className='w-[2800px] whitespace-nowrap'>
-              {specs.map((item,index)=>(
-                <Spec
-                key={`${item.name}-${index}`}
-                name={item.name}
-                description={item.description}
-                image={item.image}/>
-              ))}
-            </ul>
+            <Scrollbar style={{height:385}} className='z-35'>
+              <ul className='w-[2800px] whitespace-nowrap'>
+                {specs.map((item,index)=>(
+                  <Spec
+                  key={`${item.name}-${index}`}
+                  name={item.name}
+                  description={item.description}
+                  image={item.image}/>
+                ))}
+              </ul> 
+            </Scrollbar>
           </div>
-
         </motion.div>
           
     </section>

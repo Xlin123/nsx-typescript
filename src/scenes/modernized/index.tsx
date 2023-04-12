@@ -19,7 +19,7 @@ const Modern = ({setSelectedPage}: Props) => {
   
 
   return (
-    <section id='modern' className='mx-auto min-h-full w-5/6 py-20 bg-primary-500'>
+    <section id='modernized' className='mx-auto min-h-full w-5/6 py-20 bg-primary-500'>
         <motion.div className='md:flex items-center justify-center'
         onViewportEnter={() => setSelectedPage(SelectedPage.Modern)}>
           <motion.div className='mx-auto w-5/6'
@@ -38,7 +38,7 @@ const Modern = ({setSelectedPage}: Props) => {
               <p className='py-5 ml-4 text-sm'> It's the 2022 NSX Type S sports car, which utilizes a hybrid powertrain. A twin-turbo V-6 and three electric motors team up for blistering acceleration but the system also enables quiet, electric-only driving so your neighbors don't have a cow every time you idle through your subdivision.
               </p>
             </div>
-            <div className='md:flex md:mx-4 gap-4 p-4 border-spacing-2 border-whiteAccent-500 h-[400px] w-[550px]'>
+            <div className='md:flex md:mx-4 gap-4 p-4 border-spacing-2 border-whiteAccent-500 md:w-1/2'>
                 <img alt='nsx-modern' src={image1} className='p-2 rounded'/>
                 {extraImage}
             </div>
